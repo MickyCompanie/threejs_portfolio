@@ -4,13 +4,14 @@ import {Suspense} from "react";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import OldComputers from "../components/OldComputers.jsx";
 import {useMediaQuery} from "react-responsive";
-// import {calculateSizes} from "../constants/index.js";
+import {title, catchPhrase ,calculateSizes} from "../constants/index.js";
+import HeroCamera from "../components/HeroCamera.jsx";
 
 const Hero = () => {
-    // const isSmall = useMediaQuery({maxWidth: 440})
+    const isSmall = useMediaQuery({maxWidth: 440})
     const isMobile = useMediaQuery({maxWidth: 768})
-    // const isTablet = useMediaQuery({minWidth: 769, maxWidth: 1024})
-    // const sizes = calculateSizes(isSmall, isMobile, isTablet)
+    const isTablet = useMediaQuery({minWidth: 769, maxWidth: 1024})
+    const sizes = calculateSizes(isSmall, isMobile, isTablet)
 
     return (
         <section className="min-h-screen w-full flex flex-col relative">
@@ -18,9 +19,9 @@ const Hero = () => {
                 <p
                     className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans"
                 >
-                    Hi I'm Micky <span className="waving-hand">👋</span>
+                    {title} <span className="waving-hand">👋</span>
                 </p>
-                <p className="hero_tag text-gray_gradient">Turning coffee into code</p>
+                <p className="hero_tag text-gray_gradient"> {catchPhrase} </p>
             </div>
 
             <div className="w-full h-full absolute inset-0">
@@ -30,11 +31,13 @@ const Hero = () => {
                             makeDefault
                             position={[0, 0, 30]}
                         />
-                        <OldComputers
-                            scale={isMobile ? 1.6 : 2.3}
-                            position={[0, -10.1, -1.6]}
-                            rotation={[-6.2, 0, 0]}
-                        />
+                        <HeroCamera isMobile={isMobile}>
+                            <OldComputers
+                                scale={sizes.computersScale}
+                                position={sizes.computersPosition}
+                                rotation={sizes.computersRotation}
+                            />
+                        </HeroCamera>
                         <ambientLight
                             intensity={0.3}
                             position={[0, 0, 0]}
