@@ -14,7 +14,7 @@ const About = () => {
     }
 
     return (
-        <section className="s-space my-20">
+        <section className="s-space my-20" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-row-6 md:grid-cols-2 gap-5 h-full">
 
                 {/*grid 1*/}
