@@ -291,3 +291,18 @@ export const workExperiences = [
         animation: 'salute',
     },
 ];
+
+export const socials = [
+    {
+        src: "/assets/github.svg",
+        name: "github",
+    },
+    {
+        src: "/assets/twitter.svg",
+        name: "twitter",
+    },
+    {
+        src: "/assets/instagram.svg",
+        name: "instagram",
+    },
+];
