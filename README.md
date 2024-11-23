@@ -97,7 +97,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 
 ## <a name="links">🔗 Links</a>
 
-Here is the list of all the resources used in the project video:
+Here is the list of all the resources used in the project:
 
 - [Old Computers](https://sketchfab.com/3d-models/old-computers-7bb6e720499a467b8e0427451d180063)
 - [Computer](https://sketchfab.com/3d-models/3d-computer-sketchfab-weekly-11-mar23-d9931a9aba7c4ea1bc12b2a59dcef16e)
